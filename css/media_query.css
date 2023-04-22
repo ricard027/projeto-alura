@@ -1,6 +1,4 @@
 @media screen and (max-width: 1440px) {
-  .logo {
-  }
   .logo img {
     height: 100%;
   }
@@ -15,14 +13,13 @@
   }
 
   section:last-child .container-messages .are-not-messages h3 {
-    font-size: 1.4em;
-    height: 10%;
-    margin-top: 1rem;
+    font-size: 1.5em !important;
+    height: 30% !important;
     text-align: center;
   }
   section:last-child .container-messages .are-not-messages p {
     font-size: 1rem;
-    height: 10%;
+    height: 30% !important;
   }
 }
 
@@ -62,11 +59,9 @@
   section:last-child .container-messages h3 {
     font-size: 1.3em !important;
     height: auto !important;
-    margin-bottom: 0.5rem;
   }
   section:last-child .container-messages p {
     text-align: center;
-    margin-bottom: 1rem !important;
     font-size: 1em !important;
     height: auto !important;
   }
@@ -89,7 +84,61 @@
   }
 
   .modal .messageModal {
-    font-size: 1.5rem;
     width: 50vw;
+  }
+  .modal .messageModal span {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+  .container-page {
+    display: flex;
+    width: 90vw !important;
+    margin: 0 auto;
+  }
+  .container-alert-icon {
+    width: 70vw !important;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    font-size: 0.8rem;
+    margin-right: 1.5rem;
+  }
+  .container-alert-icon img {
+    width: 10px;
+  }
+  section:first-child {
+    width: auto !important;
+  }
+
+  .input-container .input-content {
+    text-overflow: ellipsis;
+  }
+  .input-container .input-content textarea {
+    width: 100% !important;
+  }
+
+  section:last-child .container-messages .are-not-messages h3 {
+    font-size: 1.1em !important;
+  }
+  section:last-child .container-messages .are-not-messages p {
+    font-size: 0.9rem !important;
+  }
+  section:first-child .container-buttons {
+    width: 90vw;
+  }
+  section:last-child {
+    height: 25%;
+    width: auto !important;
+  }
+  .modal .messageModal {
+    width: 70vw !important;
+  }
+  .modal .messageModal span {
+    width: 70%;
+    font-size: 1.3rem;
   }
 }
