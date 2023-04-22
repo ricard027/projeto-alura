@@ -1,3 +1,5 @@
+@import url("./media_query.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +12,22 @@ body {
 }
 .container-page {
   height: 100vh;
+  width: 100vw;
   display: flex;
+  justify-content: space-evenly;
+  border: solid red;
 }
 section:first-child {
   background-color: #e5e5e5;
-  width: 75%;
+  width: 70%;
+  background-color: green;
+}
+section:last-child {
+  background: blue !important;
 }
 .logo {
-  height: 8rem;
+  background-color: red;
+  height: 10%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -32,21 +42,23 @@ section:first-child {
   background-color: inherit;
   height: 60%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: yellow;
 }
 
 .input-container .input-content {
-  background-color: inherit;
+  border: solid red;
   width: 60%;
-  height: 15%;
+  height: 80%;
+  background-color: green;
 }
 
 .input-container .input-content textarea {
   background-color: inherit;
   height: 30vh;
-  width: 80%;
+  width: 60%;
   border: none;
   padding: 1rem;
   font-size: 1.5em;
@@ -64,6 +76,7 @@ section:first-child {
   justify-content: center;
   flex-direction: column;
   align-items: flex-end;
+  background-color: rebeccapurple;
 }
 .container-buttons .buttons-content {
   display: flex;
@@ -224,102 +237,5 @@ section:last-child .svg-container {
   to {
     opacity: 100%;
     transform: scale(1);
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .logo {
-    height: 4rem;
-  }
-  .logo img {
-    height: 100%;
-  }
-
-  button {
-    width: 250px !important;
-    height: 50px !important;
-  }
-  section:last-child .container-messages .are-not-messages {
-    height: 100%;
-    width: 80%;
-  }
-
-  section:last-child .container-messages .are-not-messages h3 {
-    font-size: 1.4em;
-    height: 10%;
-    margin-top: 1rem;
-    text-align: center;
-  }
-  section:last-child .container-messages .are-not-messages p {
-    font-size: 1rem;
-    height: 10%;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .container-alert-icon {
-    width: 90% !important;
-    margin: 0 auto;
-    justify-content: flex-start;
-  }
-  .container-buttons {
-    justify-content: flex-start;
-    align-items: center;
-    height: 26%;
-  }
-  .container-buttons .buttons-content {
-    align-items: center;
-    height: 100%;
-  }
-  .container-buttons .buttons-content .buttons {
-    width: 72% !important;
-    justify-content: flex-start;
-  }
-  section {
-    width: 100vw !important;
-  }
-  section:first-child {
-    height: 70%;
-  }
-  section:last-child {
-    height: 30%;
-  }
-
-  section:last-child .container-messages h3,
-  section:last-child .container-messages p {
-    width: 80% !important;
-  }
-  section:last-child .container-messages h3 {
-    font-size: 1.3em !important;
-    height: auto !important;
-    margin-bottom: 0.5rem;
-  }
-  section:last-child .container-messages p {
-    text-align: center;
-    margin-bottom: 1rem !important;
-    font-size: 1em !important;
-    height: auto !important;
-  }
-  section:last-child .container-messages {
-    height: 70%;
-  }
-
-  section:last-child .container-messages #btn-copy-message {
-    display: none;
-  }
-
-  .container-page {
-    flex-direction: column;
-    width: 100vw;
-    min-height: auto;
-  }
-
-  .are-not-messages img {
-    display: none;
-  }
-
-  .modal .messageModal {
-    font-size: 1.5rem;
-    width: 50vw;
   }
 }

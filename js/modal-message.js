@@ -1,4 +1,4 @@
-import { AreaTextMessage, Inputmessage } from "./main.js";
+import { AreaTextMessage, Inputmessage } from "./components.js";
 
 export const ModalMessage = (text) => {
   let customModal = document.createElement("div");

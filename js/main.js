@@ -7,13 +7,15 @@ import { ModalMessage } from "./modal-message.js";
 
 // Components
 
-export const AreaTextMessage = document.querySelector(".text-message-area");
-export const Inputmessage = document.querySelector("#input-message");
-const ButtonCopyMessage = document.querySelector("#btn-copy-message");
-const EncryptButton = document.querySelector("#encrypt");
-const DecryptButton = document.querySelector("#decrypt");
-const ContainerMessage = document.querySelector("#messages-container");
-const ContainerNotAreMessage = document.querySelector(".are-not-messages");
+import {
+  AreaTextMessage,
+  ButtonCopyMessage,
+  ContainerMessage,
+  ContainerNotAreMessage,
+  DecryptButton,
+  EncryptButton,
+  Inputmessage,
+} from "./components.js";
 
 let message = "";
 
