@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: sans-serif;
+}
+body {
+  overflow: hidden;
+}
+.container-page {
+  height: 100vh;
+  display: flex;
+}
+section:first-child {
+  background-color: #e5e5e5;
+  width: 75%;
+}
+.logo {
+  height: 8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  cursor: pointer;
+  height: 80%;
+  margin-left: 5%;
+  padding: 1rem;
+}
+.input-container {
+  background-color: inherit;
+  height: 60%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container .input-content {
+  background-color: inherit;
+  width: 60%;
+  height: 15%;
+}
+
+.input-container .input-content textarea {
+  background-color: inherit;
+  height: 30vh;
+  width: 80%;
+  border: none;
+  padding: 1rem;
+  font-size: 1.5em;
+  color: var(--primary-button-color);
+  resize: none;
+  overflow: hidden;
+}
+.input-container .input-content textarea::placeholder {
+  color: var(--primary-button-color);
+}
+
+.container-buttons {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.container-buttons .buttons-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+}
+.container-buttons .alert-icon-container {
+  height: 2rem;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.container-buttons .alert-icon-container .container-alert-icon {
+  display: inherit;
+  color: #495057;
+  gap: 0.5rem;
+  width: 71%;
+}
+.container-buttons .buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.container-buttons .buttons button {
+  width: 328px;
+  height: 67px;
+  border: none;
+  border-radius: 1.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.container-buttons .buttons button:first-child {
+  background-color: var(--primary-button-color);
+  color: var(--secondary-button-color);
+}
+.container-buttons .buttons button:last-child {
+  background-color: var(--secondary-button-color);
+  border: solid 1px var(--primary-button-color);
+  color: var(--primary-button-color);
+}
+section:last-child {
+  background-color: var(--bg-primary);
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section:last-child .container-messages {
+  background-color: var(--bg-secondary);
+  height: 90%;
+  width: 90%;
+  border-radius: 1.5rem;
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 1px 10px 0.5rem #b5b5b5;
+}
+section:last-child .container-messages #messages-container {
+  padding: 1rem;
+  display: none;
+  height: 100%;
+}
+section:last-child .container-messages #messages-container textarea {
+  resize: none;
+  overflow: hidden;
+  height: 80%;
+  width: 100%;
+  color: var(--primary-button-color);
+  font-size: 2em;
+  border: none;
+}
+
+section:last-child .container-messages .are-not-messages {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 60%;
+  text-align: center;
+}
+section:last-child .container-messages .are-not-messages img {
+  width: 100%;
+}
+section:last-child .container-messages .are-not-messages h3 {
+  color: #343a40;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  height: 20%;
+}
+section:last-child .container-messages .are-not-messages p {
+  color: #495057;
+  width: 70%;
+  height: 20%;
+  margin: 0 auto;
+  font-size: 1.4rem;
+}
+section:last-child .container-messages button {
+  position: absolute;
+  bottom: 5%;
+  width: 328px;
+  height: 67px;
+  border: solid 1px var(--primary-button-color);
+  border-radius: 1.3rem;
+  color: var(--primary-button-color);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s ease-in-out;
+}
+section:last-child .container-messages button:hover {
+  background-color: var(--primary-button-color);
+  color: var(--secondary-button-color);
+}
+section:last-child .svg-container {
+  width: 90%;
+}
+.modal {
+  font-size: 2rem;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal .messageModal {
+  background-color: var(--bg-secondary);
+  text-align: center;
+  border-radius: 1rem;
+  text-align: center;
+  height: 20vh;
+  width: 30vw;
+  font-size: 0.8em;
+  color: var(--primary-button-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animate 0.2s ease-in-out;
+  z-index: 20;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(0);
+    opacity: 50%;
+  }
+  to {
+    opacity: 100%;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .logo {
+    height: 4rem;
+  }
+  .logo img {
+    height: 100%;
+  }
+
+  button {
+    width: 250px !important;
+    height: 50px !important;
+  }
+  section:last-child .container-messages .are-not-messages {
+    height: 100%;
+    width: 80%;
+  }
+
+  section:last-child .container-messages .are-not-messages h3 {
+    font-size: 1.4em;
+    height: 10%;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  section:last-child .container-messages .are-not-messages p {
+    font-size: 1rem;
+    height: 10%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container-alert-icon {
+    width: 90% !important;
+    margin: 0 auto;
+    justify-content: flex-start;
+  }
+  .container-buttons {
+    justify-content: flex-start;
+    align-items: center;
+    height: 26%;
+  }
+  .container-buttons .buttons-content {
+    align-items: center;
+    height: 100%;
+  }
+  .container-buttons .buttons-content .buttons {
+    width: 72% !important;
+    justify-content: flex-start;
+  }
+  section {
+    width: 100vw !important;
+  }
+  section:first-child {
+    height: 70%;
+  }
+  section:last-child {
+    height: 30%;
+  }
+
+  section:last-child .container-messages h3,
+  section:last-child .container-messages p {
+    width: 80% !important;
+  }
+  section:last-child .container-messages h3 {
+    font-size: 1.3em !important;
+    height: auto !important;
+    margin-bottom: 0.5rem;
+  }
+  section:last-child .container-messages p {
+    text-align: center;
+    margin-bottom: 1rem !important;
+    font-size: 1em !important;
+    height: auto !important;
+  }
+  section:last-child .container-messages {
+    height: 70%;
+  }
+
+  section:last-child .container-messages #btn-copy-message {
+    display: none;
+  }
+
+  .container-page {
+    flex-direction: column;
+    width: 100vw;
+    min-height: auto;
+  }
+
+  .are-not-messages img {
+    display: none;
+  }
+
+  .modal .messageModal {
+    font-size: 1.5rem;
+    width: 50vw;
+  }
+}

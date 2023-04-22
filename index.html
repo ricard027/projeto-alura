@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/colors.css" />
+    <title>Decodificador de Texto</title>
+  </head>
+  <body>
+    <div class="container-page">
+      <section>
+        <div class="logo"><img src="./assets/logo-alura.svg" alt="" /></div>
+        <div class="input-container">
+          <div class="input-content">
+            <textarea
+              type="text"
+              id="input-message"
+              placeholder="digite seu texto"
+            ></textarea>
+          </div>
+          <div class="message-error">
+            <!-- Mensagem de erro -->
+          </div>
+        </div>
+        <div class="container-buttons">
+          <div class="buttons-content">
+            <div class="alert-icon-container">
+              <div class="container-alert-icon">
+                <img src="./assets/alert-icon.svg" alt="alert icon" />
+                <span>Apenas letras minúsculas e sem acento.</span>
+              </div>
+            </div>
+            <div class="buttons">
+              <button id="encrypt">Criptografar</button>
+              <button id="decrypt" class="decrypt">Descriptografar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container-messages">
+          <div id="messages-container">
+            <textarea type="text" class="text-message-area"></textarea>
+          </div>
+          <div class="are-not-messages">
+            <img src="./assets/component.svg" alt="image-not-message" />
+            <h3>Nenhuma mensagem encontrada :/</h3>
+            <p>
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+          </div>
+          <button id="btn-copy-message">Copiar</button>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
