@@ -1,0 +1,95 @@
+@media screen and (max-width: 1440px) {
+  .logo {
+  }
+  .logo img {
+    height: 100%;
+  }
+
+  button {
+    width: 250px !important;
+    height: 50px !important;
+  }
+  section:last-child .container-messages .are-not-messages {
+    height: 100%;
+    width: 80%;
+  }
+
+  section:last-child .container-messages .are-not-messages h3 {
+    font-size: 1.4em;
+    height: 10%;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  section:last-child .container-messages .are-not-messages p {
+    font-size: 1rem;
+    height: 10%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container-alert-icon {
+    width: 90% !important;
+    margin: 0 auto;
+    justify-content: flex-start;
+  }
+  .container-buttons {
+    justify-content: flex-start;
+    align-items: center;
+    height: 26%;
+  }
+  .container-buttons .buttons-content {
+    align-items: center;
+    height: 100%;
+  }
+  .container-buttons .buttons-content .buttons {
+    width: 72% !important;
+    justify-content: flex-start;
+  }
+  section {
+    width: 100vw !important;
+  }
+  section:first-child {
+    height: 70%;
+  }
+  section:last-child {
+    height: 30%;
+  }
+
+  section:last-child .container-messages h3,
+  section:last-child .container-messages p {
+    width: 80% !important;
+  }
+  section:last-child .container-messages h3 {
+    font-size: 1.3em !important;
+    height: auto !important;
+    margin-bottom: 0.5rem;
+  }
+  section:last-child .container-messages p {
+    text-align: center;
+    margin-bottom: 1rem !important;
+    font-size: 1em !important;
+    height: auto !important;
+  }
+  section:last-child .container-messages {
+    height: 70%;
+  }
+
+  section:last-child .container-messages #btn-copy-message {
+    display: none;
+  }
+
+  .container-page {
+    flex-direction: column;
+    width: 100vw;
+    min-height: auto;
+  }
+
+  .are-not-messages img {
+    display: none;
+  }
+
+  .modal .messageModal {
+    font-size: 1.5rem;
+    width: 50vw;
+  }
+}
